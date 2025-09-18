@@ -11,4 +11,35 @@ Mysql server এর ক্ষেএে আমরা phpMyadmin use করতে 
 Android studio তে new project খুললাম
 
 ------16
+package name এর উপর Mouse Right Button > New >> Java class >> class>> Name দাও >>enter  
+Name দিলাম : DatabaseHelper । 
+এখন extends যুক্ত করবো 
+Red Bulb click>>Implements method >>ok
+Again we can see Red Bulb .
+Red Bulb click>>Create constractor matching super >>ok
 
+ public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
+    }
+    //context হলো যেই class এ কাজ করা হয় ঐ class এর environment যেমন : DatabaseHelper
+    //String name এখানে name টা হলো database name
+    //int version হলো database এর version
+
+
+  এখন শুধু Context রেখে বাকী তিনটা বাদ দিয়ে দিবো name , factory , version । 
+  super এ কিছু update করবো factory প্রয়োজন পড়ে না তাই null use করব ।  name কে "DB_name" দিলাম । version মন মত ধরলাম । 1 ধরলাম । 
+
+সবগুলোকে উপরে variable ধরে করবো তাহলে আরো সুন্দর হয় । 
+
+
+final static : Java-তে সাধারণত constant define করার জন্য ব্যবহার হয় ..একবার মান assign করলে সেটি আর পরিবর্তন করা যাবে না (final এর জন্য)
+
+    public final static String DB_NAME="DB_name";
+    public final static int DB_VERSION=1;
+
+
+    public DatabaseHelper(@Nullable Context context) {
+        super(context, DB_NAME, null, 1);
+    }
+
+  
