@@ -42,4 +42,5 @@ final static : Java-তে সাধারণত constant define করার �
         super(context, DB_NAME, null, 1);
     }
 
-  
+------20
+Right side Setting এর পাশে Search button এ search করো : Device Explorer (USB দিয়ে Device এর সাথে connect থাকে যাতে । >>data>>data>>তোমার pakage name টা খোঁজ>>databases >> এখানে তোমার database file পাই যাইবা 
