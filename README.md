@@ -43,4 +43,5 @@ final static : Java-তে সাধারণত constant define করার �
     }
 
 ------20
-Right side Setting এর পাশে Search button এ search করো : Device Explorer (USB দিয়ে Device এর সাথে connect থাকে যাতে । >>data>>data>>তোমার pakage name টা খোঁজ>>databases >> এখানে তোমার database file পাই যাইবা 
+Right side Setting এর পাশে Search button এ search করো : Device Explorer (USB দিয়ে Device এর সাথে connect থাকে যাতে । >>data>>data>>তোমার pakage name টা খোঁজ>>databases >> এখানে তোমার database file পাই যাইবা >> file টা select করে Ctrl+Shift+S >> file টা save করো শেষে .sqlite লাগাইবা >> DB Browser for SQLite download লিখে chrome এ search করো  software টা install করো অবশ্যই Desktop app(DB Browser(SQLight) টা রাইখো >> software টা open করবা >>দেখো উপরে Open Database লিখা আছে ওখানে যাও file টা select করো open দাও >>Browser Data তে যাও তার নিচেই Table থেকে তোমার কাক্ষিত Table name select করো এবং সুন্দরভাবে দেখবে সব । 
+------21
