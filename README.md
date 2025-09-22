@@ -49,3 +49,17 @@ Right side Setting এর পাশে Search button এ search করো : Devi
 Click on package name - mouse right button >>New >>Activity >>Empty view Activity >> Name: ShowResult
 
 এবার আমার MainActivity.java তে buttonshow এই আইডিটাকে setOnClickListener করব
+
+# ------22
+while (cursor.moveToNext()){
+
+            int id=cursor.getInt(0);
+            String name=cursor.getString(1);
+            String mobile=cursor.getString(2);
+
+            tvDisplay.append(" \nID "+id+" Name: "+name+" Mobile: "+mobile);
+
+        }
+
+# ------23
+
