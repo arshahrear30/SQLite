@@ -7,10 +7,10 @@ SQlite database Android এর built in নিজস্ব database offline work
 Mysql server এর ক্ষেএে আমরা phpMyadmin use করতে পারতাম যা সব দেখা যাইতো সহজে কিভাবে box এ input দিবো...কিন্তু sqllite এর ক্ষেএে খালি চোখে কিছু দেখা যাবে না কারণ এটা Android a built-in already আছে 
 
 
-------15
+# ------15
 Android studio তে new project খুললাম
 
-------16
+# ------16
 package name এর উপর Mouse Right Button > New >> Java class >> class>> Name দাও >>enter  
 Name দিলাম : DatabaseHelper । 
 এখন extends যুক্ত করবো 
@@ -42,6 +42,6 @@ final static : Java-তে সাধারণত constant define করার �
         super(context, DB_NAME, null, 1);
     }
 
-------20
+# ------20
 Right side Setting এর পাশে Search button এ search করো : Device Explorer (USB দিয়ে Device এর সাথে connect থাকে যাতে । >>data>>data>>তোমার pakage name টা খোঁজ>>databases >> এখানে তোমার database file পাই যাইবা >> file টা select করে Ctrl+Shift+S >> file টা save করো শেষে .sqlite লাগাইবা >> DB Browser for SQLite download লিখে chrome এ search করো  software টা install করো অবশ্যই Desktop app(DB Browser(SQLight) টা রাইখো >> software টা open করবা >>দেখো উপরে Open Database লিখা আছে ওখানে যাও file টা select করো open দাও >>Browser Data তে যাও তার নিচেই Table থেকে তোমার কাক্ষিত Table name select করো এবং সুন্দরভাবে দেখবে সব । 
-------21
+# ------21
