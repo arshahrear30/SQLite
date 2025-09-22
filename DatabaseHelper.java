@@ -2,6 +2,7 @@ package com.smaka.sqlightdatabase;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -33,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) { //3
         //এই db ভিতরে sql command দিয়ে table create করা যায়
         //execSQL() মানে execute sql command ওর পেটে sql এর যা command দিবো তাই execute করবে
-        db.execSQL("create table my_table ( id INTIGER primary key autoincrement,name TEXT,mobile TEXT)");//5
+        db.execSQL("create table my_table ( id INTEGER primary key autoincrement,name TEXT,mobile TEXT)");//5
         //id INTIGER id নামে coloum create হইছে 3 ta coloum create হয়েছে
 
 
@@ -55,6 +56,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         conval.put("mobile",mobile);
 
         database.insert("my_table",null,conval); //10 table এ data insert করছে
+
+    }
+
+    public Cursor getAllData(){
+
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor= db.rawQuery("select * from my_table",null);
+        return cursor;
+        //rawQuery - যখন data read করে খুজতে/দেখতে যাবো তখন use করবো
+        //select এর পর *  মানে ওই টেবিলের সবগুলো ডাটা select করে ফেলছি এখন যেকোন data নিয়ে কাজ করতে পারবো ঐ টেবিলের
+        //Cursor ধরলে data টা 2 dymentionally select হয়
+
 
     }
 
