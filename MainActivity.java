@@ -1,5 +1,6 @@
 package com.smaka.sqlightdatabase;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,13 +31,22 @@ public class MainActivity extends AppCompatActivity {
 
         dbhelper=new DatabaseHelper(MainActivity.this); //2
 
-        buttonInsert.setOnClickListener(new View.OnClickListener() {
+        buttonInsert.setOnClickListener(new View.OnClickListener() { //3
             @Override
             public void onClick(View v) {
                 //insert data to sqllite database
                 //dbhelper.insertData(Name:"name",Mobile:"mobile");//এই কাজটা get এর মাধ্যমে করবো এখন ত
-                dbhelper.insertData(edName.getText().toString(),edMobile.getText().toString());
+                dbhelper.insertData(edName.getText().toString(),edMobile.getText().toString()); //4
                 Toast.makeText(MainActivity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+        buttonshow.setOnClickListener(new View.OnClickListener() { //5 আগে নতুন Activity টা খুলে নেই
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ShowResult.class));
 
             }
         });
