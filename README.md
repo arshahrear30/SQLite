@@ -61,5 +61,25 @@ while (cursor.moveToNext()){
 
         }
 
-# ------23
+# ------23  Querying mean Searching Data or Matching data
 
+DatabaseHelper.java এ শেষ } এর আগে লিখবো 
+
+ public Cursor searchdatabyId(int id){
+
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor= db.rawQuery("select * from my_table where id like '%"+id+"%' ",null);
+        //Data অর্ধেক অর্ধেক দিয়ে search করলেও যাতে পাই তাই আগে পরে % যোগ করেছি
+        return cursor;
+    }
+
+
+    //not only id .. name or anything দিয়ে করতে পারবো । 
+
+
+   ShowResult.java তে 
+   
+Cursor cursor=dbHelper.searchdatabyId(3);
+        tvDisplay.setText("Total Data"+cursor.getCount());
+মানে Table থেকে 3 no Id row data show হবে । 
+        
