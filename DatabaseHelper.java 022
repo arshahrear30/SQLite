@@ -42,7 +42,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) { //6
-
+        //onUpgrade() মেথডটা তখনই কল হয়, যখন আপনার অ্যাপের ডাটাবেস version number পরিবর্তন করা হয়।
+        //পুরনো টেবিল ফেলে দিয়ে নতুন টেবিল তৈরি করার জন্য DROP TABLE IF EXISTS ব্যবহার করা হয়।
+        db.execSQL("DROP TABLE IF EXISTS my_table");
 
     }
 
