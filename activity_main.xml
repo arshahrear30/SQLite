@@ -5,37 +5,60 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    tools:context=".MainActivity"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:padding="10dp"
+    android:layout_marginTop="22dp"
+    android:layout_marginBottom="22dp">
+
+
     <EditText
-        android:id="@+id/edName"
+        android:id="@+id/tvgetText"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Write Secret Message..."
+        android:textSize="20dp"
+        android:background="#1F000000"/>
+    <EditText
+        android:id="@+id/tvpassword"
+        android:layout_margin="10dp"
+        android:padding="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Name" />
-    <EditText
-        android:id="@+id/edMobile"
+        android:hint="Password(16 characters)"
+        android:textSize="20dp"
+        android:background="#2CE90000"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="017****" />
+        android:gravity="center"
+        >
 
     <Button
-        android:id="@+id/buttonInsert"
-        android:layout_width="match_parent"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insert Data"
-        android:backgroundTint="#F44336"
-        android:textColor="@color/black"/>
+        android:text="Encrypt data"
+        android:backgroundTint="#6BD75F"/>
 
     <Button
-        android:id="@+id/buttonshow"
+        android:id="@+id/decryptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypt data"
+        android:backgroundTint="#F80505"/>
+    </LinearLayout>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show Results"
-        android:backgroundTint="@color/black"
-        android:textColor="@color/white"/>
+        android:text=""
+        android:textSize="20dp"
+        android:textIsSelectable="true"/>
+</ScrollView>
 </LinearLayout>
